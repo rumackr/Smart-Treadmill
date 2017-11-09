@@ -8,13 +8,10 @@
  * WHICH IS THE PROPERTY OF your company.
  *
  * ========================================
- */
-#ifndef HARTDETECTION_H
-#define HARTDETECTION_H
+*/
+#ifndef BUZZER_H
+#define BUZZER_H
 #include <stdint.h>
-
-void initHartBeat(void);
-uint16_t getSample(void);
-int calcHartRate(volatile uint32_t beatTimes[], uint8_t numbBeats);
-#endif /* HARTDETECTION_H */   
+void buzzerPlayTone(const uint32_t ms_duration,  uint16_t frq);    
+#endif /* BUZZER_H */
 /* [] END OF FILE */

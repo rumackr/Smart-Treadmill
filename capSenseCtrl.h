@@ -8,6 +8,8 @@
  * - Cap sense button interface 
  * ========================================
  */
+#ifndef CAPSENSECTRL_H
+#define CAPSENSECTRL_H
 #include <stdint.h>
 #define LEFT_TOUCHED      0x40
 #define MASK_LEFT_MAX     0x20
@@ -27,11 +29,10 @@
 #define RIGHT        56
 #define RIGHT_MAX    100
 
-uint8_t capVector = 0x00;    //!< a vector that provides information about cap sense gestures
-
 
 uint16_t GetSliderPos();
 uint8_t GetCapBtn0();
 uint8_t GetCapBtn1();
 uint8_t sliderPosition(volatile uint16_t sliderVal, uint8_t sliderFlags);
+#endif /* CAPSENSECTRL_H */
 /* [] END OF FILE */
